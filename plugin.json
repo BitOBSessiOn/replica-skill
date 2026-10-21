@@ -1,0 +1,25 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "replica",
+  "version": "1.0.0",
+  "description": "Clone any app, clean-room: eleven workflow skills that reverse-engineer an app from public sources (screens, flows, data model), plan the stack, rebuild the design system screen by screen, wire backend, test flows, score parity against the original, mine user reviews for fixes, rebrand, write the listing and ship it. Six standard-library Python tools (layout diff, parity score, review themes, WCAG contrast, copycat sweep, store listing lint). No network calls, no dependencies.",
+  "author": {
+    "name": "BitOBSessiOn",
+    "url": "https://github.com/BitOBSessiOn"
+  },
+  "homepage": "https://github.com/BitOBSessiOn/replica-skill",
+  "repository": "https://github.com/BitOBSessiOn/replica-skill",
+  "license": "MIT",
+  "keywords": [
+    "replica",
+    "app-clone",
+    "clean-room",
+    "reverse-engineering",
+    "product-recon",
+    "design-tokens",
+    "parity",
+    "rebrand",
+    "saas",
+    "workflow-skills"
+  ]
+}

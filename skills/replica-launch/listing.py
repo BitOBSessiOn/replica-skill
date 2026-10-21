@@ -47,7 +47,7 @@ def length(text):
     prev_joiner = False
     for ch in text:
         cat = unicodedata.category(ch)
-        if ch == "‍":
+        if ch == "\u200d":
             prev_joiner = True
             continue
         if cat in ("Mn", "Me") or ch in ("️", "︎") or 0x1F3FB <= ord(ch) <= 0x1F3FF:

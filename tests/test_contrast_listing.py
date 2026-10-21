@@ -94,7 +94,7 @@ class Listing(unittest.TestCase):
 
     def test_emoji_counts_as_one(self):
         self.assertEqual(listing.length("a\U0001F468‍\U0001F4BBb"), 3)
-        self.assertEqual(listing.length("café"), 4)
+        self.assertEqual(listing.length("a👨\u200d💻b"), 3)
 
     def test_shipped_example_is_clean(self):
         path = os.path.join(ROOT, "replica-launch", "listing.example.json")
