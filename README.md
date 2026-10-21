@@ -1,5 +1,7 @@
 # Replica for Hermes
 
+![Replica](assets/replica-card.jpg)
+
 Eleven workflow skills that clone any app, clean-room, plus six
 standard-library Python tools. Adapted for [Hermes Agent](https://hermes-agent.nousresearch.com)
 as a portable Agent Plugin. No signup, no API key, nothing to connect.
