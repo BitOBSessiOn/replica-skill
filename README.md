@@ -73,15 +73,32 @@ risks. **`contrast.py`** runs WCAG checks on your design tokens.
 
 Tests: `python3 -m unittest discover -s tests -v`.
 
-## What this fork changes for Hermes
+## History
+
+This pack began as [The Replica skill](https://github.com/Jakeschincariol/replica-skill),
+eleven skills for Claude Code released in October 2026 by Jake Schincariol
+([opusjake.ai](https://opusjake.ai)) under MIT. In the original, users
+installed it through the Claude Code marketplace and invoked the skills as
+slash commands (`/replica-recon` and the rest); the method, the six Python
+tools and the clean-room rules are the original author's work.
+
+This repository is a fork that carries the pack into Hermes Agent. What the
+fork changes:
 
 - Skills live under `skills/` and the plugin is manifest-driven
-  (`plugin.json`), so Hermes installs it by name like any catalog plugin.
+  (`plugin.json`), so Hermes installs it by name like any catalog plugin:
+  `hermes plugins install replica`.
 - `replica-recon` triggers are anchored to rebuild intent ("clone this app",
   "build my own version of X"). Generic "reverse engineer X" requests stay
-  with REA, which covers binaries, packages and runtime evidence. Replica
-  only reads public surfaces and never decompiles or instruments anything.
-- README and install path target Hermes.
+  with REA, Hermes's skill for binaries, packages and runtime evidence.
+  Replica only reads public surfaces and never decompiles or instruments
+  anything.
+- This README and the install paths target Hermes. The Claude Code
+  distribution stays where it always was, in the upstream repository.
+
+Everything else, including the eleven skill bodies, the tools, the templates
+and the clean-room rules, is carried over unchanged. See
+[Credit](#credit) below.
 
 ## Clean-room rules, enforced by the skills
 
