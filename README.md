@@ -81,8 +81,7 @@ Tests: `python3 -m unittest discover -s tests -v`.
   "build my own version of X"). Generic "reverse engineer X" requests stay
   with REA, which covers binaries, packages and runtime evidence. Replica
   only reads public surfaces and never decompiles or instruments anything.
-- README and install path target Hermes. The Claude Code layout stays
-  available through `.claude-plugin/` for anyone arriving from the original.
+- README and install path target Hermes.
 
 ## Clean-room rules, enforced by the skills
 

@@ -1,4 +1,3 @@
-import json
 import os
 import re
 import unittest
@@ -10,10 +9,6 @@ REPO = os.path.dirname(ROOT)
 SKILLS = ["replica-recon", "replica-architect", "replica-design", "replica-build",
           "replica-backend", "replica-test", "replica-diff", "replica-entrepreneur",
           "replica-brand", "replica-launch", "replica-deploy"]
-ABOUT = ("Eleven free Claude skills that clone any app: reverse-engineer it, rebuild it, "
-         "test it for bugs, then fix what its users hate. Free, MIT.")
-
-
 def frontmatter(path):
     with open(path, encoding="utf-8") as fh:
         text = fh.read()
@@ -34,17 +29,6 @@ class Repo(unittest.TestCase):
             self.assertRegex(fm, r"description: ", s)
             self.assertGreater(len(fm), 200, "%s description is too thin" % s)
             self.assertGreater(len(text.splitlines()), 60, s)
-
-    def test_plugin_manifest_points_at_the_root_skills(self):
-        with open(os.path.join(REPO, ".claude-plugin", "plugin.json")) as fh:
-            plugin = json.load(fh)
-        self.assertEqual(plugin["name"], "replica-skill")
-        self.assertEqual(plugin["skills"], "./skills")
-        self.assertEqual(plugin["description"], ABOUT)
-        with open(os.path.join(REPO, ".claude-plugin", "marketplace.json")) as fh:
-            market = json.load(fh)
-        self.assertEqual(market["name"], "replica-skill")
-        self.assertEqual(market["plugins"][0]["name"], "replica-skill")
 
     def test_readme_carries_the_reel_copy(self):
         with open(os.path.join(REPO, "README.md"), encoding="utf-8") as fh:
